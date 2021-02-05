@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Basics</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" height="1000" width="1000"></canvas>
+    <script>
+
+        // access the canvas element so we can work with it
+        const canvas = document.getElementById("canvas");
+
+        console.log(canvas);
+
+        // get the context
+         const context = canvas.getContext("2d");
+        /*
+        context.fillStyle = "red";
+        // create a rectangle
+        context.fillRect(0, 0, 30, 30);
+
+        let increment = 0;
+
+        document.addEventListener("click", () => {
+            context.fillStyle = "white";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            increment += 30;
+
+            context.fillStyle = "red"
+            context.fillRect(0, increment, 30, 30);
+            context.fillRect(increment, 0, 30, 30);
+        }); */
+
+        // looping
+        // chessboard - not done
+
+        /* for (let i = 0; i < canvas.height; i += 30) {
+            for (let j = 0; j < i + 30; j += 30) {
+                context.fillRect(i, j, 30, 30);
+            }
+        } */
+
+        /* for (let i = 0; i < canvas.width; i += 30) {
+            context.fillRect(i, 0, 30, 30);
+            for (let j = i; j < i + 30; j += 30) {
+                context.fillRect(i, j + 30, 30, 30);
+            }
+        } */
+
+        /* context.save();
+
+        // rotate rectangles
+        for (let i = 0; i < canvas.width; i += 30) {
+            context.rotate(5 * Math.PI / 180);
+            context.fillRect(i, 0, 30, 30);
+            context.fillRect(i, i, 30, 30);
+        }
+
+        context.restore();
+        context.fillRect(0, 130, 30, 30);
+        context.fillRect(130, 0, 30, 30); */
+        
+        
+        context.strokeStyle = "blue";
+        context.rect(30, 30, 100, 100);
+        context.stroke();
+        context.save();
+
+        
+        context.strokeStyle = "crimson";
+        context.rect(100, 200, 100, 100);
+        context.stroke();
+        context.save();
+
+        context.restore();
+        context.rect(200, 400, 100, 100);
+        context.stroke();
+
+
+    </script>
+</body>
+</html>
