@@ -28,12 +28,13 @@ function createDigitalClock(date) {
 }
 
 function addBackground() {
-    //context2.save();
+    context2.save();
     context2.drawImage(clockBgImage, canvas2.width / 2 * -1, canvas2.height / 2 * -1, canvas2.width, canvas2.height);
-    //context2.arc(0, 0, canvas2.height / 2 - 20, 0, 2 * Math.PI);
-    //context2.lineWidth = '5';
-    //context2.stroke();
-    //context2.restore();
+    context2.beginPath();
+    context2.arc(0, 0, canvas2.height / 2 - 20, 0, 2 * Math.PI);
+    context2.lineWidth = '5';
+    context2.stroke();
+    context2.restore();
     }
 
 function writeBrandName() {}
