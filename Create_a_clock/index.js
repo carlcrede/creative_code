@@ -37,8 +37,6 @@ function addBackground() {
     context2.restore();
     }
 
-function writeBrandName() {}
-
 function drawHourHand(date) {
     context2.save();
 
